@@ -1,3 +1,5 @@
+package org.esfe.LLLVG20240910.Modelos;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

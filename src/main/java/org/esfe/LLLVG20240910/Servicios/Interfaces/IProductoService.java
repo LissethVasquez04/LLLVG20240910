@@ -1,11 +1,13 @@
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoGuardar;
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoModificar;
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoSalida;*
+package org.esfe.LLLVG20240910.Servicios.Interfaces;
+
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoGuardar;
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoModificar;
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoSalida;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
-public class IProductoServide {
+public interface  IProductoServide {
     List<ProductoSalida> obtenerTodos();
 
     Page<ProductoSalida> obtenerTodosPaginados(Pageable pageable);

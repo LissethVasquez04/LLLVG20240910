@@ -1,12 +1,10 @@
-package org.esfe.LLVG20240910.controladores;
+package org.esfe.LLLVG20240910.Controladores;
 
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoGuardar;
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoModificar;
-import org.esfe.LLVG20240910.Dtos.Productos.ProductoSalida;
-import org.esfe.LLVG20240910.Servicios.Interfaces.IProductoService;
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoGuardar;
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoModificar;
+import org.esfe.LLLVG20240910.Dtos.Productos.ProductoSalida;
+import org.esfe.LLLVG20240910.Servicios.Interfaces.IProductoServide;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +15,7 @@ import java.util.List;
 public class ProductoController {
 
     @Autowired
-    private IProductoService productoService;
+    private IProductoServide productoService;
 
     @GetMapping("/lista")
     public ResponseEntity<List<ProductoSalida>> mostrarTodos() {

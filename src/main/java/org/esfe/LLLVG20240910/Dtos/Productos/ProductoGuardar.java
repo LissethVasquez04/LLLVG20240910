@@ -1,14 +1,14 @@
-import lombok.Getter;
-import lombok.Setter;
+package org.esfe.LLLVG20240910.Dtos.Productos;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import lombok.Getter;
+import lombok.Setter;
 @Getter
 @Setter
-
-public class ProductoGuardar implemenst Serializable{
-private string nombreLLVG;
-private string descripcionLLVG;
+public class ProductoGuardar implements Serializable{
+private String nombreLLVG;
+private String descripcionLLVG;
 private BigDecimal precio;
 }
