@@ -2,7 +2,7 @@ package org.esfe.LLLVG20240910.Servicios.Implementaciones;
 import org.esfe.LLLVG20240910.Dtos.Productos.*;
 import org.esfe.LLLVG20240910.Modelos.*;
 import org.esfe.LLLVG20240910.Repositorios.*;
-import org.esfe.LLLVG20240910.Servicios.Interfaces.IProductoServide;
+import org.esfe.LLLVG20240910.Servicios.Interfaces.IProductoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ProductoService implements IProductoServide {
+public class ProductoService implements IProductoService {
     @Autowired
     private IProductoRepository productoRepository;
 

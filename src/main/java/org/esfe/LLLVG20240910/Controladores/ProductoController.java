@@ -3,11 +3,10 @@ package org.esfe.LLLVG20240910.Controladores;
 import org.esfe.LLLVG20240910.Dtos.Productos.ProductoGuardar;
 import org.esfe.LLLVG20240910.Dtos.Productos.ProductoModificar;
 import org.esfe.LLLVG20240910.Dtos.Productos.ProductoSalida;
-import org.esfe.LLLVG20240910.Servicios.Interfaces.IProductoServide;
+import org.esfe.LLLVG20240910.Servicios.Interfaces.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -15,7 +14,7 @@ import java.util.List;
 public class ProductoController {
 
     @Autowired
-    private IProductoServide productoService;
+    private IProductoService productoService;
 
     @GetMapping("/lista")
     public ResponseEntity<List<ProductoSalida>> mostrarTodos() {
