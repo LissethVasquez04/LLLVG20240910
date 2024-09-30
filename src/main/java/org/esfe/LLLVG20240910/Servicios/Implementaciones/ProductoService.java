@@ -30,7 +30,7 @@ public class ProductoService implements IProductoService {
                 .collect(Collectors.toList());
     }
 
-    @Override
+   /*  @Override
     public Page<ProductoSalida> obtenerTodosPaginados(Pageable pageable) {
         Page<ProductLLVG> page = productoRepository.findAll(pageable);
 
@@ -39,7 +39,7 @@ public class ProductoService implements IProductoService {
                 .collect(Collectors.toList());
 
         return new PageImpl<>(productosDto, page.getPageable(), page.getTotalElements());
-    }
+    }*/
 
     @Override
     public ProductoSalida obtenerPorId(Integer id) {

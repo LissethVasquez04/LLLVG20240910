@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api/productos")
 public class ProductoController {
@@ -25,15 +26,6 @@ public class ProductoController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ProductoSalida> buscarPorId(@PathVariable Integer id) {
-        ProductoSalida producto = productoService.obtenerPorId(id);
-        if (producto != null) {
-            return ResponseEntity.ok(producto);
-        }
-        return ResponseEntity.notFound().build();
-    }
-
     @PostMapping
     public ResponseEntity<ProductoSalida> crear(@RequestBody ProductoGuardar productoGuardar) {
         ProductoSalida producto = productoService.crear(productoGuardar);
@@ -42,8 +34,6 @@ public class ProductoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<ProductoSalida> editar(@PathVariable Integer id, @RequestBody ProductoModificar productoModificar) {
-        // Se asume que el ID se usará para encontrar y actualizar el producto correcto
-        // Si `ProductoModificar` no tiene un campo para ID, deberías manejar eso en el servicio
         ProductoSalida producto = productoService.editar(productoModificar);
         return ResponseEntity.ok(producto);
     }
@@ -54,4 +44,3 @@ public class ProductoController {
         return ResponseEntity.ok("Producto eliminado correctamente");
     }
 }
-
